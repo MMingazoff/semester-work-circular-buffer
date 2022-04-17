@@ -3,10 +3,10 @@
 #include "circular_buffer.hpp"
 
 using namespace std;
+using namespace itis;
 
 int main(int argc, char *argv[]) {
-  for (int index = 0; index < argc; index++) {
-    cout << index << ": " << argv[index] << endl;
-  }
+  CircularBuffer test_buff = CircularBuffer();
+  // for testing
   return 0;
 }
