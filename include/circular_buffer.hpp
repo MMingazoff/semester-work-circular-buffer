@@ -1,23 +1,21 @@
 #pragma once
 
-#include "assignment/linked_queue.hpp"
+#include "linked_queue.hpp"
 
-namespace assignment {
+namespace itis {
+
   /**
    * Структура данных "кольцевой буфер" на базе "очереди".
    */
   struct CircularBuffer: LinkedQueue {
    private:
-    // поля структуры
     int size_{0};           // количество элементов в буфере
     int capacity{0};        // емкость буфера
     Node* front_{nullptr};  // указатель на начало буфера
     Node* back_{nullptr};   // указатель на конец буфера
 
    public:
-    // константы структуры
     static constexpr int kInitCapacity = 10;  // начальная емкость буфера
-    static constexpr int kCapacityGrowthCoefficient = 5;  // коэффициент увеличения размера буфера
 
     /**
      * Создание буфера с указанной емкостью.
@@ -58,7 +56,6 @@ namespace assignment {
      * @return true - операция прошла успешно, false - новая емкость меньше или равна текущей
      */
     bool Resize(int new_capacity);
-
-
   };
-}
+
+}  // namespace itis

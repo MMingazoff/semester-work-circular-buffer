@@ -1,6 +1,6 @@
-#include "assignment/circular_buffer.hpp"
+#include "circular_buffer.hpp"
 
-namespace assignment {
+namespace itis {
   CircularBuffer::CircularBuffer(int capacity) {
     // write solution
   }
@@ -21,4 +21,4 @@ namespace assignment {
     // write solution
   }
 
-} // namespace assignment
+} // namespace itis

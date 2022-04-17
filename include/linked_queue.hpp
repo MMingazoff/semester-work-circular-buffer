@@ -2,17 +2,16 @@
 
 #include <vector>
 
-#include "assignment/node.hpp"   // Node
-#include "assignment/queue.hpp"  // Queue
+#include "node.hpp"
+#include "queue.hpp"
 
-namespace assignment {
+namespace itis {
 
   /**
    * Структура данных "очередь" на базе "связного списка".
    */
   struct LinkedQueue : Queue {
    private:
-    // поля структуры
     int size_{0};           // кол-во узлов в очереди
     Node* front_{nullptr};  // указатель на начало очереди
     Node* back_{nullptr};   // указатель на конец очереди
@@ -87,4 +86,4 @@ namespace assignment {
     std::vector<int> toVector() const;
   };
 
-}  // namespace assignment
+}  // namespace itis

@@ -1,6 +1,6 @@
-#include "assignment/linked_queue.hpp"
+#include "linked_queue.hpp"
 
-namespace assignment {
+namespace itis {
 
   LinkedQueue::~LinkedQueue() {
 
@@ -103,4 +103,4 @@ namespace assignment {
     return array;
   }
 
-}  // namespace assignment
+}  // namespace itis

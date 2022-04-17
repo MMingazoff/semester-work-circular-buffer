@@ -2,7 +2,7 @@
 
 #include <optional>
 
-namespace assignment {
+namespace itis {
 
   /**
    * Интерфейс "очередь".
@@ -67,4 +67,4 @@ namespace assignment {
     virtual int size() const = 0;
   };
 
-}  // namespace assignment
+}  // namespace itis
