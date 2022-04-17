@@ -10,7 +10,7 @@ namespace itis {
   struct CircularBuffer: LinkedQueue {
    private:
     int size_{0};           // количество элементов в буфере
-    int capacity{0};        // емкость буфера
+    int capacity_{0};        // емкость буфера
     Node* front_{nullptr};  // указатель на начало буфера
     Node* back_{nullptr};   // указатель на конец буфера
 

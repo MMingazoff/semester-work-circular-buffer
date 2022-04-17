@@ -11,6 +11,7 @@ namespace itis {
 
   bool CircularBuffer::Dequeue() {
     // write solution
+    return false;
   }
 
   void CircularBuffer::Clear() {
@@ -19,6 +20,7 @@ namespace itis {
 
   bool CircularBuffer::Resize(int new_capacity) {
     // write solution
+    return false;
   }
 
 } // namespace itis
