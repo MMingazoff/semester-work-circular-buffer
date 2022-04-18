@@ -11,12 +11,11 @@ namespace itis {
    * Структура данных "очередь" на базе "связного списка".
    */
   struct LinkedQueue : Queue {
-   private:
+   public:
     int size_{0};           // кол-во узлов в очереди
     Node* front_{nullptr};  // указатель на начало очереди
     Node* back_{nullptr};   // указатель на конец очереди
 
-   public:
     /**
      * Создание пустой очереди ~ O(1).
      */

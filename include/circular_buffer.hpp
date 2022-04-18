@@ -9,18 +9,13 @@ namespace itis {
    */
   struct CircularBuffer: LinkedQueue {
    private:
-    int size_{0};           // количество элементов в буфере
-    int capacity{0};        // емкость буфера
-    Node* front_{nullptr};  // указатель на начало буфера
-    Node* back_{nullptr};   // указатель на конец буфера
+    int capacity_{0};        // емкость буфера
 
    public:
     static constexpr int kInitCapacity = 10;  // начальная емкость буфера
 
     /**
      * Создание буфера с указанной емкостью.
-     *
-     * Выделенные ячейки буфера инициализируются нулевым значением.
      *
      * @param capacity - начальная емкость буфера
      * @throws invalid_argument при указании неположительной емкости буфера
@@ -40,14 +35,6 @@ namespace itis {
      * @return true - операция успешна, false - операция невозможна
      */
     bool Dequeue() override;
-
-    /**
-     * Очистка буфера.
-     *
-     * Высвобождает выделенную под буфер память.
-     * Устанавливает поля в нулевые значения.
-     */
-    void Clear() override;
 
     /**
      * Увеличение емкости буфера.

@@ -31,14 +31,16 @@ namespace itis {
   }
 
   void LinkedQueue::Clear() {
-    for (Node* curr_node = front_; curr_node != nullptr; /* */) {
-      Node* node_to_remove = curr_node;
-      curr_node = curr_node->next;
+      Node* node_to_remove = front_;
+      for (int i = 0; i < size_-1; i++) {
+        auto temp = node_to_remove;
+        node_to_remove = node_to_remove->next;
+        delete temp;
+      }
       delete node_to_remove;
-    }
-    front_ = nullptr;
-    back_ = nullptr;
-    size_ = 0;
+      front_ = nullptr;
+      back_ = nullptr;
+      size_ = 0;
   }
 
   std::optional<int> LinkedQueue::front() const {
