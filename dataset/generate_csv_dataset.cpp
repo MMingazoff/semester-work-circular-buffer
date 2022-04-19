@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
   // чтобы все заполнить надо выбрать сначала size = 100; < 1000001, а потом 500 и 5000001
     for (int size = 500; size < 5000001; size = size * 10) {
       string string_size = to_string(size);
-      auto output_stream = ofstream(path + "/add/" + string_papka + "/" + string_size + ".csv", ios::ios_base::app);
+      auto output_stream = ofstream(path + "/" + string_papka + "/" + string_size + ".csv", ios::ios_base::app);
 
       const auto seed = chrono::system_clock::now().time_since_epoch().count();
       auto engine = mt19937(seed);  // без seed`а генератор будет выдавать одни и те же значения
