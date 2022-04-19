@@ -28,6 +28,12 @@ namespace itis {
     if (size_ == 0) {
       return false;
     }
+    if (size_ == 1) {
+      delete front_;
+      delete back_;
+      size_ -= 1;
+      return true;
+    }
     size_ -= 1;
     Node* temp = front_;
     front_ = front_->next;

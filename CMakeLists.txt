@@ -35,7 +35,12 @@ target_compile_definitions(project_paths INTERFACE
 
 add_library(${PROJECT_NAME} STATIC
         src/circular_buffer.cpp
-        include/circular_buffer.hpp)
+        src/linked_queue.cpp
+        src/node.cpp
+        include/circular_buffer.hpp
+        include/linked_queue.hpp
+        include/node.hpp
+        include/queue.hpp)
 
 # включить предупреждения компилятора для библиотеки (линковка)
 target_link_libraries(${PROJECT_NAME} PRIVATE project_warnings)
