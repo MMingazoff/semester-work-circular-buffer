@@ -26,7 +26,6 @@ namespace itis {
     }
     if (size_ == 1) {
       delete front_;
-      delete back_;
       size_ -= 1;
       front_ = nullptr;
       back_ = nullptr;
