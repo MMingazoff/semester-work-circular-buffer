@@ -11,7 +11,6 @@ using namespace std;
 using namespace itis;
 
 // абсолютный путь до набора данных и папки проекта
-static constexpr auto kProjectPath = string_view{PROJECT_SOURCE_DIR};
 static constexpr auto kDatasetPath = string_view{PROJECT_DATASET_DIR};
 
 int main() {
