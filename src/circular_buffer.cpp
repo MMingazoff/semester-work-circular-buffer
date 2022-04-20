@@ -12,13 +12,12 @@ namespace itis {
   void CircularBuffer::Enqueue(int value) {
     if (size_ < capacity_) {
       LinkedQueue::Enqueue(value);
-      back_->next = front_;
     }
     else {
         Dequeue();
         LinkedQueue::Enqueue(value);
-        back_->next = front_;
     }
+    back_->next = front_;
   }
 
   bool CircularBuffer::Dequeue() {
@@ -29,11 +28,14 @@ namespace itis {
       delete front_;
       delete back_;
       size_ -= 1;
+      front_ = nullptr;
+      back_ = nullptr;
       return true;
     }
     size_ -= 1;
     Node* temp = front_;
     front_ = front_->next;
+    back_->next = front_;
     delete temp;
     return true;
   }
