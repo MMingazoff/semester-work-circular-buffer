@@ -48,7 +48,21 @@ int main(int argc, char** argv) {
     } else {
       string_papka = to_string(papka);
     }
-  // чтобы все заполнить надо выбрать сначала size = 100; < 1000001, а потом 500 и 5000001
+    for (int size = 100; size < 1000001; size = size * 10) {
+      string string_size = to_string(size);
+      auto output_stream = ofstream(path + "/" + string_papka + "/" + string_size + ".csv", ios::ios_base::app);
+
+      const auto seed = chrono::system_clock::now().time_since_epoch().count();
+      auto engine = mt19937(seed);  // без seed`а генератор будет выдавать одни и те же значения
+      auto dist = uniform_int_distribution(-100000, 100000);  // равновероятное распределение генерируемых чисел
+
+      if (output_stream) {
+        for (int counter = 0; counter < size - 1; counter++) {
+          output_stream << dist(engine) << '\n';
+        }
+        output_stream << dist(engine) << '\n';
+      }
+    }
     for (int size = 500; size < 5000001; size = size * 10) {
       string string_size = to_string(size);
       auto output_stream = ofstream(path + "/" + string_papka + "/" + string_size + ".csv", ios::ios_base::app);
