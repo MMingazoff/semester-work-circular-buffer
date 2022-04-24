@@ -91,6 +91,7 @@ namespace itis {
   }
 
   std::vector<int> LinkedQueue::toVector() const {
+//    back_->next= nullptr;
     if (front_ == nullptr || size_ == 0) {
       return {};
     }
